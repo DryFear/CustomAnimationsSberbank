@@ -17,11 +17,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ValueAnimationsActivity"/>
-        <activity android:name=".ObjectAnimationsActivity"/>
-        <activity android:name=".AnimationDrawableActivity"/>
-        <activity android:name=".ViewAnimationActivity"/>
-        <activity android:name=".CustomViewAnimationsActivity"/>
+        <activity android:name=".ValueAnimationsActivity">
+
+        </activity>
+        <activity android:name=".ObjectAnimationsActivity">
+
+        </activity>
+        <activity android:name=".AnimationDrawableActivity">
+
+        </activity>
+        <activity android:name=".ViewAnimationActivity">
+
+        </activity>
+        <activity android:name=".CustomViewAnimationsActivity">
+
+        </activity>
     </application>
 
 </manifest>

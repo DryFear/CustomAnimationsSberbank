@@ -24,7 +24,7 @@ public class FinanceProgressView extends View {
     private static final int DEFAULT_COLOR = Color.BLACK;
     private static final int MAX_PROGRESS = 100;
     private static final int MAX_ANGLE = 360;
-    private static final int REQUESTED_SIZE = 700;
+    private static final int REQUESTED_SIZE = 300;
     private static final float RATIO_STROKE_WIDTH = 64f/700f;
 
     private int mStrokeWidth = 50;
@@ -55,7 +55,7 @@ public class FinanceProgressView extends View {
         Log.d(TAG, "onMeasure() called with: widthMeasureSpec = [" + MeasureSpec.toString(widthMeasureSpec) + "], heightMeasureSpec = [" + MeasureSpec.toString(heightMeasureSpec) + "]");
         getTextBounds(formatString(MAX_PROGRESS));
         Log.d(TAG, "onMeasure() called with: stroke_width = [" + mStrokeWidth + "], heightMeasureSpec = [" + heightMeasureSpec + "]");
-        final int size = Math.max(mTextBounds.width(), mTextBounds.height() + 2 * mStrokeWidth);
+        final int size = REQUESTED_SIZE;
         final int width = resolveSize(size, widthMeasureSpec);
         final int height = resolveSize(size, heightMeasureSpec);
         mProgressRect.right = width - mStrokeWidth;
@@ -125,27 +125,28 @@ public class FinanceProgressView extends View {
     }
 
 
-    public int getmProgress() {
+    public int getProgress() {
         return mProgress;
     }
 
-    public void setmProgress(int mProgress) {
+    public void setProgress(int mProgress) {
         this.mProgress = mProgress;
+        invalidate();;
     }
 
-    public int getmColor() {
+    public int getColor() {
         return mColor;
     }
 
-    public void setmColor(int mColor) {
+    public void setColor(int mColor) {
         this.mColor = mColor;
     }
 
-    public int getmTextSize() {
+    public int getTextSize() {
         return mTextSize;
     }
 
-    public void setmTextSize(int mTextSize) {
+    public void setTextSize(int mTextSize) {
         this.mTextSize = mTextSize;
     }
 }
